@@ -1,16 +1,16 @@
 class Solution {
   public long solution(int a, int b) {
        long answer = 0;      //결과값 초기화
-      if(a<b){  //b가 a보다 클 경우
+      if(a<b){               //b가 a보다 클 경우
           for(int i=a;i<=b;i++){
-              answer+=i;    //answer+i=i
+              answer+=i;     //answer+i=i
               }
       }else if(a>b) {    //a가 b보다 클 경우
           for(int i=b;i<=a;i++){
               answer+=i;    //answer=i=i
           }
       }else{
-          answer=a;         //
+          answer=a;         
       }
       return answer;        //결과값 반환
   }
