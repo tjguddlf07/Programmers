@@ -1,0 +1,20 @@
+class Solution {
+  public long solution(int a, int b) {
+       long answer = 0;      //결과값 초기화
+      if(a<b){  //b가 a보다 클 경우
+          for(int i=a;i<=b;i++){
+              answer+=i;    //answer+i=i
+              }
+      }else if(a>b) {    //a가 b보다 클 경우
+          for(int i=b;i<=a;i++){
+              answer+=i;    //answer=i=i
+          }
+      }else{
+          answer=a;         //
+      }
+      return answer;        //결과값 반환
+  }
+}
+// a와 b를 비교하여 a가 클경우에는 a부터 b까지의 합을 answer에 저장하고
+// b가 클경우에는 b부터 a까지의 합을 answer에 저장
+// a와 b가 동일할 경우 a가 answer에 저장
