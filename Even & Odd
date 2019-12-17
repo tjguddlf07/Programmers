@@ -1,0 +1,11 @@
+class Solution {
+  public String solution(int num) {
+      String answer = "";
+      if(num%2==0){         //짝수인 경우
+          answer="Even";
+      }else if(num%2!=0) {  //홀수인 경우
+          answer="Odd";
+      }
+      return answer;
+  }
+}
