@@ -10,3 +10,5 @@ class Solution {
       return answer;
   }
 }
+
+//arr.length : 배열의 길이 반환
