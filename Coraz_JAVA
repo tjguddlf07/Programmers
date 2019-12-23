@@ -1,0 +1,23 @@
+class Solution {
+    int answer=0;
+  public int solution(int num) {
+      if(num == 1){
+            return answer;
+        }
+        if(answer==500){
+            return -1;
+        }
+        answer++;
+        if (num % 2 == 1) {
+            // 홀수
+            return solution(num * 3 + 1);
+        } else{
+            // 짝수
+            return solution(num / 2);
+        } 
+  }
+}
+
+//1.입력된 수가 짝수라면 2로 나눕니다. 
+//2.입력된 수가 홀수라면 3을 곱하고 1을 더합니다.
+//3.결과로 나온 수에 같은 작업을 1이 될 때까지 반복합니다.
