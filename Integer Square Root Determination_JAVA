@@ -3,7 +3,7 @@ class Solution {
       double temp = Math.sqrt((double) n);
 		
       if (temp % 1 == 0) {
-      	long answer = (long) Math.pow(temp+1, 2);
+      	long answer = (long) Math.pow(temp+1, 2);  //제곱 계산식
       	return answer;
       } else {
       	return -1;
