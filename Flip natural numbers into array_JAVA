@@ -12,15 +12,16 @@ public int[] solution(long n) {
 }
 
 class Solution {
-public int[] solution1(long n) {
+public int[] solution(long n) {
     int[] answer = {};
     String temp = String.valueOf(n);
     int len = temp.length();
     answer = new int[len];
+    //int[] answer= new int[temp.length()];
     int cnt = len;
     
     for(int i=0; i<len; i++) {
         answer[i] = Integer.parseInt( String.valueOf(temp.charAt(--cnt)) );
-        }
-        return answer;
-  }
+    }
+    return answer;
+}
