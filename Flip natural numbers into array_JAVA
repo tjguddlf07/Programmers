@@ -1,18 +1,5 @@
 class Solution {
 public int[] solution(long n) {
-    String len= Long.toString(n); //숫자 타입을 String 타입으로 변환
-    int[] answer = new int[len.length()];
-    
-    for (int i = 0; i < len.length(); i++) {
-        answer[i] = (int) (n % 10); //12345%10=5, 1234%10=4, .. -> 나머지 값 저장
-        n /= 10; // 12345/10=1234, 1234/10=123, .. -> n/10=n
-    } 
-    return answer;
-  }
-}
-
-class Solution {
-public int[] solution(long n) {
     int[] answer = {};
     String temp = String.valueOf(n);
     int len = temp.length();
@@ -24,4 +11,30 @@ public int[] solution(long n) {
         answer[i] = Integer.parseInt( String.valueOf(temp.charAt(--cnt)) );
     }
     return answer;
+ }
+}
+
+class Solution {
+public int[] solution(long n) {
+    String len= Long.toString(n); //
+    int[] answer = new int[len.length()];
+    
+    for (int i = 0; i < len.length(); i++) {
+        answer[i] = (int) (n % 10); //12345%10=5, 1234%10=4, .. -> 나머지 값 저장
+        n /= 10; // 12345/10=1234, 1234/10=123, .. -> n/10=n
+    } 
+    return answer;
+  }
+}
+
+class Solution{
+public int[] solution(long n) {
+    int length = Long.toString(n).length();
+    int[] answer = new int[length];
+    for (int i = 0; i < length; i++) {
+        answer[i] = (int) (n % 10); //12345%10=5, 1234%10=4, ..
+        n /= 10; // 12345/10=1234, 1234/10=123, ..
+    }
+    return answer;
+ }
 }
