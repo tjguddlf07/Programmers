@@ -1,21 +1,23 @@
 class Solution {
   public boolean solution(int x) {
-       boolean answer = false;     //반환값 선언
+      boolean answer = true;    //반환값 선언
       
       int temp = x;    //자릿수 합을 계산할때 사용하는 임시 변수
       int sum = 0;    //자릿수의 합
       
-      while(temp/10 > 0){
+      while(temp/10 > 0){   //temp!=0
           //x를 10으로 나누어 나머지들은 자릿수이며 sum에 더해줌
             sum += temp%10; 
-            temp = temp/10;    //다음 자릿수를 위해 나누기
+            temp /= 10;    //다음 자릿수를 위해 나누기
         }
         //제일 마지막에 남는 몫이 마지막 자릿수기때문에 sum에 더해줌
-        sum += temp;    
+        sum += temp; 
       
-      //입력값을 자릿수의 합으로 나누었을때 떨어지면
+         //입력값을 자릿수의 합으로 나누었을때 떨어지면
         if(x%sum == 0){
             answer = true;    //하샤드 수이므로 true
+        }else{
+            answer = false;
         }
         
         //System.out.println(sum);
