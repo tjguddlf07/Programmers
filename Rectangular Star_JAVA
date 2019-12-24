@@ -3,8 +3,8 @@ import java.util.Scanner;
 public class Solution {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        int a = sc.nextInt();
-        int b = sc.nextInt();
+        int a = sc.nextInt();	//세로(열)의 길이 m
+        int b = sc.nextInt();	//가로(행)의 길이 n
 
         for(int i=0; i<b; i++) { // 행의 전체 수는 3이다. 그러므로 전체 반복되는 횟수는 3번(b) 이다
 			for(int j=0; j<a; j++) { //찍어야되는 별의 수 만큼 반복한다. 찍어야 되는 별의 수는 a 이므로 5번(a) 만큼 반복한다.
