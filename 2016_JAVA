@@ -1,15 +1,15 @@
 class Solution {
   public String solution(int a, int b) {
       String answer = "";                                         //answer(문자열) 변수 초기화
-      String weeks[]={"SUN","MON","TUE","WED","THU","FRI","SAT"}; //weeks(문자열) 초기화
-      int months[]={31,29,31,30,31,30,31,31,30,31,30,31};         //월(month) 초기화
+      String weeks[]={"SUN","MON","TUE","WED","THU","FRI","SAT"}; // weeks(문자열 요일) 변수
+      int months[]={0,31,29,31,30,31,30,31,31,30,31,30,31};       //월(month) 초기화
       int sum=0;                                                  //합 초기화
       
       for(int i=0;i<a;i++){
           sum+=months[i];
       }
       
-      int date= sum + b;        
+      int date= sum + b;                                          //현재 일수 계산
       
       switch(date%7){
               case(0):answer=weeks[4];break;
